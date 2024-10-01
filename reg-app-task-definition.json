@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:084375547362:task-definition/reg-app-task-defination-new:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:334037828810:task-definition/ecsTaskDefination:1",
     "containerDefinitions": [
         {
-            "name": "reg-app",
-            "image": "084375547362.dkr.ecr.ap-south-1.amazonaws.com/reg-app",
+            "name": "ecsContainer",
+            "image": "334037828810.dkr.ecr.ap-south-1.amazonaws.com/pipelineecs",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "reg-app-80-tcp",
+                    "name": "ecscontainer-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/reg-app-task-defination-new",
+                    "awslogs-group": "/ecs/ecsTaskDefination",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,9 +35,9 @@
             "systemControls": []
         }
     ],
-    "family": "reg-app-task-defination-new",
-    "taskRoleArn": "arn:aws:iam::084375547362:role/ecsTaskExecutionRolevivek",
-    "executionRoleArn": "arn:aws:iam::084375547362:role/ecsTaskExecutionRolevivek",
+    "family": "ecsTaskDefination",
+    "taskRoleArn": "arn:aws:iam::334037828810:role/ecsRoles",
+    "executionRoleArn": "arn:aws:iam::334037828810:role/ecsRoles",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
@@ -88,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-09-30T15:18:17.096Z",
-    "registeredBy": "arn:aws:iam::084375547362:root",
+    "registeredAt": "2024-10-01T06:28:15.424Z",
+    "registeredBy": "arn:aws:iam::334037828810:root",
     "tags": []
 }
